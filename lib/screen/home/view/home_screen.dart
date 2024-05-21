@@ -30,13 +30,13 @@ class _HomeScreenState extends State<HomeScreen> {
               Navigator.pushNamed(context, 'post');
                 }, child: Text("POST"),),
                 TextButton(onPressed: () {
-            
+                  Navigator.pushNamed(context, 'comment');
                 }, child: Text("COMMENTS")),
                 TextButton(onPressed: () {
-            
+                  Navigator.pushNamed(context, 'album');
                 }, child: Text("ALBUMS")),
                 TextButton(onPressed: () {
-            
+                  Navigator.pushNamed(context, 'photo');
                 }, child: Text("PHOTOS")),
                 TextButton(onPressed: () {
             

@@ -1,14 +1,14 @@
-
 import 'package:flutter/material.dart';
-import 'package:json_app/screen/home/modal/json_modal.dart';
 import 'package:json_app/utils/jsonHelper/json_helper.dart';
 
-class jsonProvider with ChangeNotifier {
-  List<JsonModal> postList=[];
+import '../modal/comments_modal.dart';
+
+class CommentsProvider with ChangeNotifier {
+  List<CommentsJsonModal> commentsList=[];
 
   Future<void> getJsonData() async {
     postjsonHelper helper = postjsonHelper();
-    postList = await helper.postJsonParsing();
+    commentsList = await helper.commentsJsonParsing();
     notifyListeners();
   }
 }

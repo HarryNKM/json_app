@@ -1,14 +1,14 @@
-
 import 'package:flutter/material.dart';
-import 'package:json_app/screen/home/modal/json_modal.dart';
 import 'package:json_app/utils/jsonHelper/json_helper.dart';
 
-class jsonProvider with ChangeNotifier {
-  List<JsonModal> postList=[];
+import '../modal/album_modal.dart';
+
+class AlbumProvider with ChangeNotifier {
+  List<AlbumJsonModal> albumList=[];
 
   Future<void> getJsonData() async {
     postjsonHelper helper = postjsonHelper();
-    postList = await helper.postJsonParsing();
+    albumList = await helper.albumJsonParsing();
     notifyListeners();
   }
 }
