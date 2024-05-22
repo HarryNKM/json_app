@@ -4,6 +4,7 @@ import 'package:json_app/screen/comments/view/comments_screen.dart';
 import 'package:json_app/screen/home/view/home_screen.dart';
 import 'package:json_app/screen/photos/view/photos_screen.dart';
 import 'package:json_app/screen/post/view/post_screen.dart';
+import 'package:json_app/screen/user/view/user_screen.dart';
 
 Map<String, WidgetBuilder> app_routes = {
   '/': (context) => HomeScreen(),
@@ -11,4 +12,5 @@ Map<String, WidgetBuilder> app_routes = {
   'comment': (context) => CommentScreen(),
   'album': (context) => AlbumScreen(),
   'photo': (context) => PhotoScreen(),
+  'user': (context) => UserScreen(),
 };

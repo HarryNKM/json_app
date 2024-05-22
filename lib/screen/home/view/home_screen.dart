@@ -41,6 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 TextButton(onPressed: () {
             
                 }, child: Text("TODOS")),
+                TextButton(onPressed: () {
+                  Navigator.pushNamed(context, 'user');
+                }, child: Text("USER")),
               ],
             ),
           ),
