@@ -26,7 +26,8 @@ class _PhotoScreenState extends State<PhotoScreen> {
   Widget build(BuildContext context) {
     providerW=context.watch<PhotosProvider>();
     providerR=context.read<PhotosProvider>();
-    return Scaffold(
+    return
+      Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         centerTitle: true,

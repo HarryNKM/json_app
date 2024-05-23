@@ -9,6 +9,7 @@ class PhotosProvider with ChangeNotifier
   async {
     postjsonHelper helper = postjsonHelper();
     photosList = await helper.photosJsonParsing();
+    notifyListeners();
   }
 
 

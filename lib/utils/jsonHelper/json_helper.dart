@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:json_app/screen/albums/modal/album_modal.dart';
 import 'package:json_app/screen/comments/modal/comments_modal.dart';
+import 'package:json_app/screen/country/modal/country_modal.dart';
 import 'package:json_app/screen/home/modal/json_modal.dart';
 import 'package:json_app/screen/photos/modal/photos_modal.dart';
 
@@ -53,5 +54,13 @@ class postjsonHelper {
 
     List<UserModal> u1=json.map((e)=> UserModal.mapToModal(e)).toList();
     return u1;
+  }
+
+  Future<List<CountryModal>> countryJosnParsiong()
+  async {
+    String jsonList= await rootBundle.loadString("assetes/json/country_json.json");
+    List countryList=jsonDecode(jsonList);
+    List<CountryModal> c1=countryList.map((e)=>CountryModal.mapToModal(e)).toList();
+    return c1;
   }
 }

@@ -44,6 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 TextButton(onPressed: () {
                   Navigator.pushNamed(context, 'user');
                 }, child: Text("USER")),
+                TextButton(onPressed: () {
+                  Navigator.pushNamed(context, 'country');
+                }, child: Text("COUNTRY")),
               ],
             ),
           ),
